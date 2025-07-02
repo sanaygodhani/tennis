@@ -6,7 +6,7 @@ from tqdm import tqdm
 pd.set_option('display.max_columns', None)
 
 df = pd.read_csv("./data/singles_match_data/atp_matches_2024.csv")
-
+# correlation!=causation
 # print(df.info())
 
 match_data = pd.read_csv("./data/singles_match_data/atp_matches_2002.csv")
@@ -57,5 +57,5 @@ match_data_filter["result"] = np.where(boolean_mask, 0, 1)
 match_data_filter.loc[boolean_mask, p1_columns], match_data_filter.loc[boolean_mask, p2_columns] = match_data_filter.loc[boolean_mask, p2_columns].values, match_data_filter.loc[boolean_mask, p1_columns].values
 
 match_data_filter.to_csv("./data/clean_dataset.csv", index=False)
-# print(match_data_filter)
+# print(match_data_filter.head())
 
