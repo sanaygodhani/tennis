@@ -119,8 +119,7 @@ def getStats(player1, player2, match, stats):
     h2h_surface = stats["h2h_surface"] 
 
     result["ELO_diff"] = elo_players[PLAYER1_ID] = elo_players[PLAYER2_ID]
-    result["ELO_SURFACE_diff"] = elo_surface_players[PLAYER1_ID] - elo_surface_players[PLAYER2_ID]
-    result["ELO_GRAD_diff"] = elo_grad_players[PLAYER1_ID] - elo_grad_players[PLAYER2_ID]
+    result["ELO_SURFACE_diff"] = elo_surface_players[SURFACE][PLAYER1_ID] - elo_surface_players[SURFACE][PLAYER2_ID]
     result["# OF MATCHES_diff"] = matches_played[PLAYER1_ID] - matches_played[PLAYER2_ID]
     result["H2H_diff"] = h2h[(PLAYER1_ID, PLAYER2_ID)] - h2h[(PLAYER2_ID, PLAYER1_ID)]
     result["H2H_SURFACE_diff"] = h2h_surface[(PLAYER1_ID, PLAYER2_ID)] - h2h_surface[(PLAYER2_ID, PLAYER1_ID)]
