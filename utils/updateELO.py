@@ -137,12 +137,12 @@ def getStats(player1, player2, match, stats):
         else:
             result[f"LAST_{k}_GRAD_diff"] = 0
 
-        result[f"LAST_{k}_ACE_diff"] = mean(list(last_k_matches[PLAYER1_ID]["player_ace"])[-k:]) - mean(list(last_k_matches[PLAYER2_ID]["player_ace"])[-k:])
-        result[f"LAST_{k}_DF_diff"] = mean(list(last_k_matches[PLAYER1_ID]["player_df"])[-k:]) - mean(list(last_k_matches[PLAYER2_ID]["player_df"])[-k:])
-        result[f"LAST_{k}_1STIN_diff"] = mean(list(last_k_matches[PLAYER1_ID]["player_1stIn"])[-k:]) - mean(list(last_k_matches[PLAYER2_ID]["player_1stIn"])[-k:])
-        result[f"LAST_{k}_1STWON_diff"] = mean(list(last_k_matches[PLAYER1_ID]["player_1stWon"])[-k:]) - mean(list(last_k_matches[PLAYER2_ID]["player_1stWon"])[-k:])
-        result[f"LAST_{k}_2NDWON_diff"] = mean(list(last_k_matches[PLAYER1_ID]["player_2ndWon"])[-k:]) - mean(list(last_k_matches[PLAYER2_ID]["player_2ndWon"])[-k:])
-        result[f"LAST_{k}_BPSAVED_diff"] = mean(list(last_k_matches[PLAYER1_ID]["player_bpSaved"])[-k:]) - mean(list(last_k_matches[PLAYER2_ID]["player_bpSaved"])[-k:])
+        result[f"LAST_{k}_ACE_diff"] = mean(list(last_k_matches_stats[PLAYER1_ID]["player_ace"])[-k:]) - mean(list(last_k_matches_stats[PLAYER2_ID]["player_ace"])[-k:])
+        result[f"LAST_{k}_DF_diff"] = mean(list(last_k_matches_stats[PLAYER1_ID]["player_df"])[-k:]) - mean(list(last_k_matches_stats[PLAYER2_ID]["player_df"])[-k:])
+        result[f"LAST_{k}_1STIN_diff"] = mean(list(last_k_matches_stats[PLAYER1_ID]["player_1stIn"])[-k:]) - mean(list(last_k_matches_stats[PLAYER2_ID]["player_1stIn"])[-k:])
+        result[f"LAST_{k}_1STWON_diff"] = mean(list(last_k_matches_stats[PLAYER1_ID]["player_1stWon"])[-k:]) - mean(list(last_k_matches_stats[PLAYER2_ID]["player_1stWon"])[-k:])
+        result[f"LAST_{k}_2NDWON_diff"] = mean(list(last_k_matches_stats[PLAYER1_ID]["player_2ndWon"])[-k:]) - mean(list(last_k_matches_stats[PLAYER2_ID]["player_2ndWon"])[-k:])
+        result[f"LAST_{k}_BPSAVED_diff"] = mean(list(last_k_matches_stats[PLAYER1_ID]["player_bpSaved"])[-k:]) - mean(list(last_k_matches_stats[PLAYER2_ID]["player_bpSaved"])[-k:])
 
     return result
 
